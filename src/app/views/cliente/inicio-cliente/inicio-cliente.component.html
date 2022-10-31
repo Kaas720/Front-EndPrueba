@@ -1,0 +1,19 @@
+
+<br>
+<div class="Container">
+    <div *ngFor="let productos of producto" class="styleDivContenedor">
+        <h3 class="text-aline-center">{{productos.descripcion}}</h3>
+        <img width="100%" src="{{productos.url}}" alt="imagen laptop">
+        <br><br>
+        <div class="divBoton">
+            <div class="Containerbutton">
+                <button (click)="agrgarAccarito(productos.descripcion,productos.precio,1)" mat-raised-button color>Añadir a carrito</button>
+            </div>
+        </div>
+        <br>
+        <p class="text-aline-rigth">{{productos.precio}}</p>
+    </div>
+</div>
+<a  [routerLink]="['/cliente/confirmar-entrega']" class="float">
+    <i  class="fa fa-whatsapp my-float">Carrito</i> 
+</a>
